@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class User
+{
+    public string name;
+    public string occupation;
+    [TextArea(5,10)]
+    public string comment;
+    public User[] connections;
+    //UI panel to fill up
+    public Sprite profilePic;
+}
+
+public class UserScript : MonoBehaviour
+{
+    public User userInfo;
+}
