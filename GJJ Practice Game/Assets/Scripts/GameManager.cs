@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public struct Level
@@ -16,6 +17,10 @@ public struct Level
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private Text clientCommentText, clicksText, timerText;
+    [SerializeField] private GameObject clientPicture;
+    private Image clientSprite;
+
     private float levelTimer;
     [SerializeField]
     private bool paused;
@@ -32,11 +37,16 @@ public class GameManager : MonoBehaviour
         connectionLayer = new Stack<string>();
         connectionLayer.Push("Base layer");
         levelTimer = 0.0f;
-        paused = true;
+        paused = false;
         clicks = 0;
         levelNumber = 0;
         victory = false;
         //display index 0 of levels
+
+        clientCommentText.text = "\"" + levels[levelNumber].clientRequest + "\"";
+        clientSprite = clientPicture.GetComponent<Image>();
+
+        LoadLevel();
     }
 
     // Update is called once per frame
@@ -54,6 +64,11 @@ public class GameManager : MonoBehaviour
             Debug.Log("Click detected");
             clicks++;
         }
+
+        // Update Level Info textboxes
+        clicksText.text = "Clicks: " + clicks.ToString();
+        timerText.text = "Time: " + Mathf.RoundToInt(levelTimer);
+
     }
 
     /// <summary>
@@ -87,5 +102,9 @@ public class GameManager : MonoBehaviour
         //display level at index levelNumber
     }
 
+    void LoadLevel()
+    {
+        clientSprite.sprite = levels[levelNumber].clientPicture;
+    }
 
 }
