@@ -24,10 +24,12 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] GameObject profilePanel;
     [SerializeField] GameObject commentBubble;
     [SerializeField] Text commentText;
+    [SerializeField] Text nameText;
 
     private void Start()
     {
         commentText.text = userInfo.comment;
+        nameText.text = userInfo.name;
     }
 
     public void enableProfilePanel()
