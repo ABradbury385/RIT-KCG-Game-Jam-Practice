@@ -24,5 +24,9 @@ public class UserScript : MonoBehaviour
     public void enableProfilePanel()
     {
         profilePanel.SetActive(true);
+        ProfilePanel panelInfo = profilePanel.GetComponent<ProfilePanel>();
+        panelInfo.NameText = userInfo.name;
+        panelInfo.OccupationText = userInfo.occupation;
+        panelInfo.CommentText = userInfo.comment;
     }
 }
