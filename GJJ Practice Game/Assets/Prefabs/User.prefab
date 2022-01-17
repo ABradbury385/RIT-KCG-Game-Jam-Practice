@@ -300,3 +300,7 @@ MonoBehaviour:
       connections: []
       profilePic: {fileID: 0}
     profilePic: {fileID: 0}
+  userPanel: {fileID: 0}
+  profilePanel: {fileID: 0}
+  commentBubble: {fileID: 411437171084389304}
+  commentText: {fileID: 8217570508202057243}

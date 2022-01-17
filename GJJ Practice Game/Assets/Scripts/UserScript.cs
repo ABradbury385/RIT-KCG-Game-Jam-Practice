@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class User
@@ -14,12 +16,19 @@ public class User
     public Sprite profilePic;
 }
 
-public class UserScript : MonoBehaviour
+public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public User userInfo;
 
     [SerializeField] GameObject userPanel;
     [SerializeField] GameObject profilePanel;
+    [SerializeField] GameObject commentBubble;
+    [SerializeField] Text commentText;
+
+    private void Start()
+    {
+        commentText.text = userInfo.comment;
+    }
 
     public void enableProfilePanel()
     {
@@ -28,5 +37,14 @@ public class UserScript : MonoBehaviour
         panelInfo.NameText = userInfo.name;
         panelInfo.OccupationText = userInfo.occupation;
         panelInfo.CommentText = userInfo.comment;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        commentBubble.SetActive(true);
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        commentBubble.SetActive(false);
     }
 }
