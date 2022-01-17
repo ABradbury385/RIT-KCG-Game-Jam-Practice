@@ -17,4 +17,12 @@ public class User
 public class UserScript : MonoBehaviour
 {
     public User userInfo;
+
+    [SerializeField] GameObject userPanel;
+    [SerializeField] GameObject profilePanel;
+
+    public void enableProfilePanel()
+    {
+        profilePanel.SetActive(true);
+    }
 }
