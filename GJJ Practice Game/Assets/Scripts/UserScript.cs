@@ -19,9 +19,8 @@ public class User
 
 public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    // Variables
     public User userInfo;
-
-    //[SerializeField] GameObject userPanel;
     [SerializeField] GameObject profilePanel;
     [SerializeField] GameObject commentBubble;
     [SerializeField] Text commentText;
@@ -33,6 +32,10 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         nameText.text = userInfo.name;
     }
 
+    /// <summary>
+    /// Activates the Right or Left profilePanel and fills in the propper 
+    ///     information about that user's connections
+    /// </summary>
     public void enableProfilePanel()
     {
         profilePanel.SetActive(true);
@@ -41,23 +44,31 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         panelInfo.OccupationText = userInfo.occupation;
         panelInfo.CommentText = userInfo.comment;
 
+        // Fills in the connection information if available
         if(userInfo.connections[0] != null)
         {
-            panelInfo.Contact1Text = userInfo.connections[0].name + " // " + userInfo.connections[0].occupation + " // \"" + userInfo.connections[0].comment + "\"";
+            panelInfo.Contact1Text = userInfo.connections[0].name + " // " 
+                + userInfo.connections[0].occupation + " // \"" + userInfo.connections[0].comment + "\"";
             panelInfo.Contact1Panel = userInfo.userConnectionsPanel;
         }
         if (userInfo.connections[1] != null)
         {
-            panelInfo.Contact2Text = userInfo.connections[1].name + " // " + userInfo.connections[1].occupation + " // \"" + userInfo.connections[1].comment + "\"";
+            panelInfo.Contact2Text = userInfo.connections[1].name + " // " 
+                + userInfo.connections[1].occupation + " // \"" + userInfo.connections[1].comment + "\"";
             panelInfo.Contact2Panel = userInfo.userConnectionsPanel;
         }
         if (userInfo.connections[2] != null)
         {
-            panelInfo.Contact3Text = userInfo.connections[2].name + " // " + userInfo.connections[2].occupation + " // \"" + userInfo.connections[2].comment + "\"";
+            panelInfo.Contact3Text = userInfo.connections[2].name + " // " 
+                + userInfo.connections[2].occupation + " // \"" + userInfo.connections[2].comment + "\"";
             panelInfo.Contact3Panel = userInfo.userConnectionsPanel;
         }
     }
 
+    /// <summary>
+    /// Pointer information for hoverables
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerEnter(PointerEventData eventData)
     {
         commentBubble.SetActive(true);

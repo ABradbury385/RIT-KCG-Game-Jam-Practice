@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class ProfilePanel : MonoBehaviour
 {
+    // Variables
     [SerializeField] Text nameText, occupationText, commentText, contact1Text, contact2Text, contact3Text;
-
     [SerializeField] GameObject contact1Panel, contact2Panel, contact3Panel;
     [SerializeField] GameObject contact1Button, contact2Button, contact3Button;
-
     [SerializeField] List<GameObject> contactPanels;
-
     [SerializeField] GameManager gameManager;
 
     // Properties
@@ -51,7 +49,6 @@ public class ProfilePanel : MonoBehaviour
             contact3Button.SetActive(true);
         }
     }
-
     public GameObject Contact1Panel
     {
         set
@@ -74,13 +71,7 @@ public class ProfilePanel : MonoBehaviour
         }
     }
 
-/*    private void Start()
-    {
-        contactPanels = new List<GameObject>();
-        contactPanels.Add(contact1Button);
-        contactPanels.Add(contact2Button);
-        contactPanels.Add(contact3Button);
-    }*/
+    // Functions
 
     // Enables the contact panel of the person clicked
     public void EnableContactPanel(int _contactNumber)
