@@ -38,6 +38,9 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     /// </summary>
     public void enableProfilePanel()
     {
+        if(!profilePanel.activeInHierarchy)
+            GameManager.SharedInstance.Clicks++;
+
         profilePanel.SetActive(true);
         ProfilePanel panelInfo = profilePanel.GetComponent<ProfilePanel>();
         panelInfo.NameText = userInfo.name;
@@ -63,6 +66,26 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                 + userInfo.connections[2].occupation + " // \"" + userInfo.connections[2].comment + "\"";
             panelInfo.Contact3Panel = userInfo.userConnectionsPanel;
         }
+    }
+
+    public void ParseUserChoice()
+    {
+        if (!ClientScript.SharedInstance.selected)
+            return;
+
+        if(userInfo.name == GameManager.SharedInstance.CorrectName)
+        {
+            GameManager.SharedInstance.Victory = true;
+        }
+        else
+        {
+            GameManager.SharedInstance.Victory = false;
+        }
+
+        GameManager.SharedInstance.GameOver = true;
+
+        //wait until outcome is parsed to end selection
+        ClientScript.SharedInstance.selected = false;
     }
 
     /// <summary>
