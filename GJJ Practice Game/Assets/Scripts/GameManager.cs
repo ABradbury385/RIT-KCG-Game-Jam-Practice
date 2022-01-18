@@ -47,6 +47,10 @@ public class GameManager : MonoBehaviour
 
     public int Clicks { get { return clicks; } set { clicks = value; } }
 
+    public bool GameOver { get { return gameOver; } set { gameOver = value; } }
+
+    public bool Victory { get { return victory; } set { victory = value; } }
+
     private void Awake()
     {
         SharedInstance = this;
