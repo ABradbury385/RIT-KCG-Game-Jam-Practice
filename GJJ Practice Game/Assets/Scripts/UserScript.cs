@@ -14,13 +14,14 @@ public class User
     public User[] connections;
     //UI panel to fill up
     public Sprite profilePic;
+    public GameObject userConnectionsPanel;
 }
 
 public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public User userInfo;
 
-    [SerializeField] GameObject userPanel;
+    //[SerializeField] GameObject userPanel;
     [SerializeField] GameObject profilePanel;
     [SerializeField] GameObject commentBubble;
     [SerializeField] Text commentText;
@@ -39,6 +40,22 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         panelInfo.NameText = userInfo.name;
         panelInfo.OccupationText = userInfo.occupation;
         panelInfo.CommentText = userInfo.comment;
+
+        if(userInfo.connections[0] != null)
+        {
+            panelInfo.Contact1Text = userInfo.connections[0].name + " // " + userInfo.connections[0].occupation + " // \"" + userInfo.connections[0].comment + "\"";
+            panelInfo.Contact1Panel = userInfo.userConnectionsPanel;
+        }
+        if (userInfo.connections[1] != null)
+        {
+            panelInfo.Contact2Text = userInfo.connections[1].name + " // " + userInfo.connections[1].occupation + " // \"" + userInfo.connections[1].comment + "\"";
+            panelInfo.Contact2Panel = userInfo.userConnectionsPanel;
+        }
+        if (userInfo.connections[2] != null)
+        {
+            panelInfo.Contact3Text = userInfo.connections[2].name + " // " + userInfo.connections[2].occupation + " // \"" + userInfo.connections[2].comment + "\"";
+            panelInfo.Contact3Panel = userInfo.userConnectionsPanel;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)

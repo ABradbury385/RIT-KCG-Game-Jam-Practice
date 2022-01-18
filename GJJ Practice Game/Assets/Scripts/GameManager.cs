@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Text clientCommentText, clicksText, timerText;
     [SerializeField] private GameObject clientPicture;
+    [SerializeField] private GameObject currentConnectionsPanel;
     private Image clientSprite;
 
     private float levelTimer;
@@ -30,6 +31,14 @@ public class GameManager : MonoBehaviour
     private Stack<string> connectionLayer;  //string for now, will change to UI panels
     [SerializeField]
     private Level[] levels;    //temp string, will be level info
+
+
+    // Properties
+    public GameObject CurrentConnectionsPanel
+    {
+        get { return currentConnectionsPanel; }
+        set { currentConnectionsPanel = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
