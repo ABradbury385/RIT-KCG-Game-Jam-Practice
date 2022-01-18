@@ -17,9 +17,9 @@ public struct Level
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Text clientCommentText, clicksText, timerText;
-    [SerializeField] private GameObject clientPicture;
-    [SerializeField] private GameObject currentConnectionsPanel;
+    [SerializeField] private Text clientCommentText, clicksText, timerText, successText;
+    [SerializeField] private GameObject clientPicture, currentConnectionsPanel,
+        gameScreen, endScreen, successScreen, failureScreen;
     private Image clientSprite;
 
     private float levelTimer;
@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     private bool paused;
     private int clicks;
     private int levelNumber;
+    [SerializeField]
+    private bool gameOver;
+    [SerializeField]
     private bool victory;
     private Stack<string> connectionLayer;  //string for now, will change to UI panels
     [SerializeField]
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour
         clicks = 0;
         levelNumber = 0;
         victory = false;
+        gameOver = false;
         //display index 0 of levels
 
         clientCommentText.text = "\"" + levels[levelNumber].clientRequest + "\"";
@@ -61,6 +65,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if the game has ended and displays the results
+        if(gameOver)
+        {
+            paused = true;
+            gameScreen.SetActive(false);
+            endScreen.SetActive(true);
+
+            if(victory)
+            {
+                successScreen.SetActive(true);
+                successText.text = "You connected the right people in " + clicks + "  clicks and " + Mathf.RoundToInt(levelTimer) + " seconds!";
+            }
+            else
+            {
+                failureScreen.SetActive(true);
+            }
+        }
+
         //only run timer if level is running
         if (!paused)
         {

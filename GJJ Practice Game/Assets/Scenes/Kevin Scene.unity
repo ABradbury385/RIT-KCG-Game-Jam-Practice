@@ -10223,9 +10223,16 @@ MonoBehaviour:
   clientCommentText: {fileID: 385668070}
   clicksText: {fileID: 1700507101}
   timerText: {fileID: 840800892}
+  successText: {fileID: 1411108937}
   clientPicture: {fileID: 1744221084}
   currentConnectionsPanel: {fileID: 984244682}
+  gameScreen: {fileID: 716012736}
+  endScreen: {fileID: 1691613861}
+  successScreen: {fileID: 1372981330}
+  failureScreen: {fileID: 293957708}
   paused: 0
+  gameOver: 0
+  victory: 0
   levels:
   - name: 
     correctName: 
