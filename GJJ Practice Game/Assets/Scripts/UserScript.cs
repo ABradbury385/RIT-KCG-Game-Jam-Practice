@@ -38,6 +38,9 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     /// </summary>
     public void enableProfilePanel()
     {
+        if(!profilePanel.activeInHierarchy)
+            GameManager.SharedInstance.Clicks++;
+
         profilePanel.SetActive(true);
         ProfilePanel panelInfo = profilePanel.GetComponent<ProfilePanel>();
         panelInfo.NameText = userInfo.name;

@@ -10,7 +10,6 @@ public class ProfilePanel : MonoBehaviour
     [SerializeField] GameObject contact1Panel, contact2Panel, contact3Panel;
     [SerializeField] GameObject contact1Button, contact2Button, contact3Button;
     [SerializeField] List<GameObject> contactPanels;
-    [SerializeField] GameManager gameManager;
 
     // Properties
     public string NameText
@@ -79,22 +78,23 @@ public class ProfilePanel : MonoBehaviour
         switch (_contactNumber)
         {
             case 1:
-                gameManager.CurrentConnectionsPanel.SetActive(false);
-                gameManager.CurrentConnectionsPanel = contact1Panel;
+                GameManager.SharedInstance.CurrentConnectionsPanel.SetActive(false);
+                GameManager.SharedInstance.CurrentConnectionsPanel = contact1Panel;
                 contact1Panel.SetActive(true);
                 break;
             case 2:
-                gameManager.CurrentConnectionsPanel.SetActive(false);
-                gameManager.CurrentConnectionsPanel = contact2Panel;
+                GameManager.SharedInstance.CurrentConnectionsPanel.SetActive(false);
+                GameManager.SharedInstance.CurrentConnectionsPanel = contact2Panel;
                 contact2Panel.SetActive(true);
                 break;
             case 3:
-                gameManager.CurrentConnectionsPanel.SetActive(false);
-                gameManager.CurrentConnectionsPanel = contact3Panel;
+                GameManager.SharedInstance.CurrentConnectionsPanel.SetActive(false);
+                GameManager.SharedInstance.CurrentConnectionsPanel = contact3Panel;
                 contact3Panel.SetActive(true);
                 break;
         }
 
+        GameManager.SharedInstance.Clicks++;
         gameObject.SetActive(false);
     }
 

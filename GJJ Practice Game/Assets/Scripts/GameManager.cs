@@ -17,6 +17,8 @@ public struct Level
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager SharedInstance;
+
     [SerializeField] private Text clientCommentText, clicksText, timerText, successText;
     [SerializeField] private GameObject clientPicture, currentConnectionsPanel,
         gameScreen, endScreen, successScreen, failureScreen;
@@ -43,9 +45,18 @@ public class GameManager : MonoBehaviour
         set { currentConnectionsPanel = value; }
     }
 
+    public int Clicks { get { return clicks; } set { clicks = value; } }
+
+    private void Awake()
+    {
+        SharedInstance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 60;
+
         connectionLayer = new Stack<string>();
         connectionLayer.Push("Base layer");
         levelTimer = 0.0f;
@@ -87,13 +98,6 @@ public class GameManager : MonoBehaviour
         if (!paused)
         {
             levelTimer += Time.deltaTime;
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            //will need to check if clicked item is a user icon
-            Debug.Log("Click detected");
-            clicks++;
         }
 
         // Update Level Info textboxes
