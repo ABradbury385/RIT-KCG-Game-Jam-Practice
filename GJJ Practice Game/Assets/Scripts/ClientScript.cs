@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ClientScript : MonoBehaviour
 {
+    public static ClientScript SharedInstance;
     private LineRenderer line;
     private Material lineMat;
     public Color lineColor;
@@ -13,6 +14,11 @@ public class ClientScript : MonoBehaviour
     public Transform lineSpawn;
     private Vector3 lineStart;
     public bool selected;
+
+    private void Awake()
+    {
+        SharedInstance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -42,10 +48,11 @@ public class ClientScript : MonoBehaviour
             Vector3[] positions = new Vector3[] { lineStart, mousePos};
             line.SetPositions(positions);
 
-            if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+            //right click to end selection
+            if(Input.GetMouseButtonDown(1))
             {
-                selected = false;
                 line.enabled = false;
+                selected = false;
             }
         }
     }

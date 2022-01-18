@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
 
     public bool Victory { get { return victory; } set { victory = value; } }
 
+    public string CorrectName { get { return levels[levelNumber].correctName; } }
+
     private void Awake()
     {
         SharedInstance = this;

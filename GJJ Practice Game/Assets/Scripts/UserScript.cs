@@ -68,6 +68,26 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
     }
 
+    public void ParseUserChoice()
+    {
+        if (!ClientScript.SharedInstance.selected)
+            return;
+
+        if(userInfo.name == GameManager.SharedInstance.CorrectName)
+        {
+            GameManager.SharedInstance.Victory = true;
+        }
+        else
+        {
+            GameManager.SharedInstance.Victory = false;
+        }
+
+        GameManager.SharedInstance.GameOver = true;
+
+        //wait until outcome is parsed to end selection
+        ClientScript.SharedInstance.selected = false;
+    }
+
     /// <summary>
     /// Pointer information for hoverables
     /// </summary>

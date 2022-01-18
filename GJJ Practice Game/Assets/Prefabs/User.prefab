@@ -356,7 +356,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1669116061154300322}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -390691131922391594}
+        m_TargetAssemblyTypeName: UserScript, Assembly-CSharp
+        m_MethodName: enableProfilePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -390691131922391594}
+        m_TargetAssemblyTypeName: UserScript, Assembly-CSharp
+        m_MethodName: ParseUserChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-390691131922391594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,8 +403,9 @@ MonoBehaviour:
       comment: 
       connections: []
       profilePic: {fileID: 0}
+      userConnectionsPanel: {fileID: 0}
     profilePic: {fileID: 0}
-  userPanel: {fileID: 0}
+    userConnectionsPanel: {fileID: 0}
   profilePanel: {fileID: 0}
   commentBubble: {fileID: 411437171084389304}
   commentText: {fileID: 8217570508202057243}
