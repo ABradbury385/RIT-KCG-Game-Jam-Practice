@@ -604,19 +604,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 48951019}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 885518553}
-        m_TargetAssemblyTypeName: ProfilePanel, Assembly-CSharp
-        m_MethodName: EnableContactPanel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &48951019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2947,19 +2935,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 392871088}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1852352977}
-        m_TargetAssemblyTypeName: ProfilePanel, Assembly-CSharp
-        m_MethodName: EnableContactPanel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &392871088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3160,19 +3136,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 420050233}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 885518553}
-        m_TargetAssemblyTypeName: ProfilePanel, Assembly-CSharp
-        m_MethodName: EnableContactPanel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &420050233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5132,7 +5096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &885518552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5362,19 +5326,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 915981796}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1852352977}
-        m_TargetAssemblyTypeName: ProfilePanel, Assembly-CSharp
-        m_MethodName: EnableContactPanel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &915981796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8927,19 +8879,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534132279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 885518553}
-        m_TargetAssemblyTypeName: ProfilePanel, Assembly-CSharp
-        m_MethodName: EnableContactPanel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1534132279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10614,19 +10554,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1813730823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1852352977}
-        m_TargetAssemblyTypeName: ProfilePanel, Assembly-CSharp
-        m_MethodName: EnableContactPanel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1813730823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10683,7 +10611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1852352976
 RectTransform:
   m_ObjectHideFlags: 0
