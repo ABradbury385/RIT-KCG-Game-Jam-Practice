@@ -49,16 +49,19 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         // Fills in the connection information if available
         if(userInfo.connections[0] != null)
         {
+            panelInfo.Contact1Name = userInfo.connections[0].name;
             panelInfo.Contact1Text = userInfo.connections[0].name + " // \"" + userInfo.connections[0].comment + "\"";
             panelInfo.Contact1Panel = userInfo.userConnectionsPanel;
         }
         if (userInfo.connections[1] != null)
         {
+            panelInfo.Contact2Name = userInfo.connections[1].name;
             panelInfo.Contact2Text = userInfo.connections[1].name + " // \"" + userInfo.connections[1].comment + "\"";
             panelInfo.Contact2Panel = userInfo.userConnectionsPanel;
         }
         if (userInfo.connections[2] != null)
         {
+            panelInfo.Contact3Name = userInfo.connections[2].name;
             panelInfo.Contact3Text = userInfo.connections[2].name + " // \"" + userInfo.connections[2].comment + "\"";
             panelInfo.Contact3Panel = userInfo.userConnectionsPanel;
         }

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class ProfilePanel : MonoBehaviour
 {
     // Variables
-    [SerializeField] Text nameText, occupationText, commentText, contact1Text, contact2Text, contact3Text;
+    [SerializeField] Text nameText, occupationText, commentText, contact1Text, contact2Text, contact3Text,
+        contact1Name, contact2Name, contact3Name;
     [SerializeField] GameObject contact1Panel, contact2Panel, contact3Panel;
     [SerializeField] GameObject contact1Button, contact2Button, contact3Button;
     [SerializeField] List<GameObject> contactPanels;
@@ -42,6 +43,27 @@ public class ProfilePanel : MonoBehaviour
         {
             contact3Text.text = value;
             contact3Button.SetActive(true);
+        }
+    }
+    public string Contact1Name
+    {
+        set
+        {
+            contact1Name.text = value;
+        }
+    }
+    public string Contact2Name
+    {
+        set
+        {
+            contact2Name.text = value;
+        }
+    }
+    public string Contact3Name
+    {
+        set
+        {
+            contact3Name.text = value;
         }
     }
     public GameObject Contact1Panel
