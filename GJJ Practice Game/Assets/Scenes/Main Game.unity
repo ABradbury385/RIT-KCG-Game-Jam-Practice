@@ -1035,85 +1035,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb54230c51218f44fa8386b3b8967027, type: 3}
---- !u!1 &87219607
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 87219610}
-  - component: {fileID: 87219609}
-  - component: {fileID: 87219608}
-  m_Layer: 5
-  m_Name: Job Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &87219608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87219607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Job: Programmer'
---- !u!222 &87219609
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87219607}
-  m_CullTransparentMesh: 1
---- !u!224 &87219610
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87219607}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1244450724}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1991, y: 16.7753}
-  m_SizeDelta: {x: 349.4019, y: 22.0831}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &129736417 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5702738846223778594, guid: fb54230c51218f44fa8386b3b8967027, type: 3}
@@ -2922,8 +2843,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -81.898865}
-  m_SizeDelta: {x: -20, y: -183.7977}
+  m_AnchoredPosition: {x: 0, y: -60}
+  m_SizeDelta: {x: -20, y: -140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &340527055
 MonoBehaviour:
@@ -3147,7 +3068,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Comment: "I had to work late again yesterday."'
+  m_Text: '"I had to work late again yesterday."'
 --- !u!222 &402332569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3168,12 +3089,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 942162239}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5047, y: -25.4196}
-  m_SizeDelta: {x: 350.7906, y: 50.2339}
+  m_AnchoredPosition: {x: 0.0000094175, y: -2.35}
+  m_SizeDelta: {x: 350.79, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &420050231
 GameObject:
@@ -3486,6 +3407,10 @@ PrefabInstance:
     - target: {fileID: -390691131922391594, guid: fb54230c51218f44fa8386b3b8967027, type: 3}
       propertyPath: userInfo.occupation
       value: Business Owner
+      objectReference: {fileID: 0}
+    - target: {fileID: -390691131922391594, guid: fb54230c51218f44fa8386b3b8967027, type: 3}
+      propertyPath: userInfo.speechBubbleText
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: -390691131922391594, guid: fb54230c51218f44fa8386b3b8967027, type: 3}
       propertyPath: userInfo.userConnectionsPanel
@@ -5066,8 +4991,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -81.898865}
-  m_SizeDelta: {x: -20, y: -183.7977}
+  m_AnchoredPosition: {x: 0, y: -60}
+  m_SizeDelta: {x: -20, y: -140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861938306
 MonoBehaviour:
@@ -5125,7 +5050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &885518552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5161,7 +5086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 971728159}
-  occupationText: {fileID: 87219608}
+  occupationText: {fileID: 0}
   commentText: {fileID: 1152746874}
   contact1Text: {fileID: 156367942}
   contact2Text: {fileID: 500932767}
@@ -5458,7 +5383,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1164750639}
-  - {fileID: 1058785155}
   - {fileID: 402332570}
   m_Father: {fileID: 1852352976}
   m_RootOrder: 0
@@ -5635,7 +5559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Name: John Doe'
+  m_Text: 'Name: '
 --- !u!222 &971728160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5819,85 +5743,6 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -63.43799}
   m_SizeDelta: {x: 823, y: 292.12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1058785152
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1058785155}
-  - component: {fileID: 1058785154}
-  - component: {fileID: 1058785153}
-  m_Layer: 5
-  m_Name: Job Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1058785153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058785152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Job: Programmer'
---- !u!222 &1058785154
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058785152}
-  m_CullTransparentMesh: 1
---- !u!224 &1058785155
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058785152}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 942162239}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1991, y: 16.7753}
-  m_SizeDelta: {x: 349.4019, y: 22.0831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1096376409 stripped
 Transform:
@@ -6952,7 +6797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Comment: "I had to work late again yesterday."'
+  m_Text: '"I had to work late again yesterday."'
 --- !u!222 &1152746875
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6973,12 +6818,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1244450724}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5047, y: -25.4196}
-  m_SizeDelta: {x: 350.7906, y: 50.2339}
+  m_AnchoredPosition: {x: -0.5047, y: -3.35}
+  m_SizeDelta: {x: 350.79, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1164750636
 GameObject:
@@ -7031,7 +6876,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Name: John Doe'
+  m_Text: John Doe
 --- !u!222 &1164750638
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7323,7 +7168,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 971728161}
-  - {fileID: 87219610}
   - {fileID: 1152746876}
   m_Father: {fileID: 885518552}
   m_RootOrder: 0
@@ -10435,7 +10279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1852352976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10471,7 +10315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1164750637}
-  occupationText: {fileID: 1058785153}
+  occupationText: {fileID: 0}
   commentText: {fileID: 402332568}
   contact1Text: {fileID: 1553080601}
   contact2Text: {fileID: 69065894}

@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class User
 {
     public string name;
-    public string occupation;
     [TextArea(5,10)]
     public string comment;
+    public string speechBubbleText;
     public User[] connections;
     //UI panel to fill up
     public Sprite profilePic;
@@ -28,7 +28,7 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void Start()
     {
-        commentText.text = userInfo.comment;
+        commentText.text = userInfo.speechBubbleText;
         nameText.text = userInfo.name;
     }
 
@@ -44,26 +44,22 @@ public class UserScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         profilePanel.SetActive(true);
         ProfilePanel panelInfo = profilePanel.GetComponent<ProfilePanel>();
         panelInfo.NameText = userInfo.name;
-        panelInfo.OccupationText = userInfo.occupation;
         panelInfo.CommentText = userInfo.comment;
 
         // Fills in the connection information if available
         if(userInfo.connections[0] != null)
         {
-            panelInfo.Contact1Text = userInfo.connections[0].name + " // " 
-                + userInfo.connections[0].occupation + " // \"" + userInfo.connections[0].comment + "\"";
+            panelInfo.Contact1Text = userInfo.connections[0].name + " // \"" + userInfo.connections[0].comment + "\"";
             panelInfo.Contact1Panel = userInfo.userConnectionsPanel;
         }
         if (userInfo.connections[1] != null)
         {
-            panelInfo.Contact2Text = userInfo.connections[1].name + " // " 
-                + userInfo.connections[1].occupation + " // \"" + userInfo.connections[1].comment + "\"";
+            panelInfo.Contact2Text = userInfo.connections[1].name + " // \"" + userInfo.connections[1].comment + "\"";
             panelInfo.Contact2Panel = userInfo.userConnectionsPanel;
         }
         if (userInfo.connections[2] != null)
         {
-            panelInfo.Contact3Text = userInfo.connections[2].name + " // " 
-                + userInfo.connections[2].occupation + " // \"" + userInfo.connections[2].comment + "\"";
+            panelInfo.Contact3Text = userInfo.connections[2].name + " // \"" + userInfo.connections[2].comment + "\"";
             panelInfo.Contact3Panel = userInfo.userConnectionsPanel;
         }
     }

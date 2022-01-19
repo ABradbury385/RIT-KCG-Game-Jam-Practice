@@ -14,15 +14,11 @@ public class ProfilePanel : MonoBehaviour
     // Properties
     public string NameText
     {
-        set { nameText.text = "Name: " + value; }
-    }
-    public string OccupationText
-    {
-        set { occupationText.text = "Occupation: " + value; }
+        set { nameText.text = value; }
     }
     public string CommentText
     {
-        set { commentText.text = "Comment: " + value; }
+        set { commentText.text = value; }
     }
     public string Contact1Text
     {
