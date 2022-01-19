@@ -82,15 +82,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(startScreen.activeInHierarchy)
-        {
-            if(Input.GetKeyDown(KeyCode.Return))
-            {
-                startScreen.SetActive(false);
-                gameScreen.SetActive(true);
-                paused = false;
-            }
-        }
 
         // Check if the game has ended and displays the results
         if(gameOver)
@@ -102,7 +93,7 @@ public class GameManager : MonoBehaviour
             if(victory)
             {
                 successScreen.SetActive(true);
-                successText.text = "You connected the right people in " + clicks + "  clicks and " + Mathf.RoundToInt(levelTimer) + " seconds!";
+                //successText.text = "You connected the right people in " + clicks + "  clicks and " + Mathf.RoundToInt(levelTimer) + " seconds!";
             }
             else
             {
@@ -156,6 +147,16 @@ public class GameManager : MonoBehaviour
     void LoadLevel()
     {
         clientSprite.sprite = levels[levelNumber].clientPicture;
+    }
+
+    public void StartGame()
+    {
+        if (startScreen.activeInHierarchy)
+        {
+            startScreen.SetActive(false);
+            gameScreen.SetActive(true);
+            paused = false;
+        }
     }
 
 }

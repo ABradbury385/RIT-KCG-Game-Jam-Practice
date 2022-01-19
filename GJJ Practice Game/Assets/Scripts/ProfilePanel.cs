@@ -9,8 +9,9 @@ public class ProfilePanel : MonoBehaviour
     [SerializeField] Text nameText, occupationText, commentText, contact1Text, contact2Text, contact3Text,
         contact1Name, contact2Name, contact3Name;
     [SerializeField] GameObject contact1Panel, contact2Panel, contact3Panel;
-    [SerializeField] GameObject contact1Button, contact2Button, contact3Button;
+    [SerializeField] GameObject contact1Button, contact2Button, contact3Button, contact1Image, contact2Image, contact3Image;
     [SerializeField] List<GameObject> contactPanels;
+    private Sprite contact1Sprite, contact2Sprite, contact3Sprite;
 
     // Properties
     public string NameText
@@ -85,6 +86,27 @@ public class ProfilePanel : MonoBehaviour
         set
         {
             contact3Panel = value;
+        }
+    }
+    public Sprite Contact1Sprite
+    {
+        set
+        {
+            contact1Image.GetComponent<Image>().sprite = value;
+        }
+    }
+    public Sprite Contact2Sprite
+    {
+        set
+        {
+            contact2Image.GetComponent<Image>().sprite = value;
+        }
+    }
+    public Sprite Contact3Sprite
+    {
+        set
+        {
+            contact3Image.GetComponent<Image>().sprite = value;
         }
     }
 
