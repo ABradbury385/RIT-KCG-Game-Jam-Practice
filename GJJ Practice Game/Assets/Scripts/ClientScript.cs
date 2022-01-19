@@ -62,4 +62,10 @@ public class ClientScript : MonoBehaviour
         selected = true;
         line.enabled = true;
     }
+
+    public void DisableLine()
+    {
+        line.enabled = false;
+        selected = false;
+    }
 }

@@ -116,16 +116,15 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Resets values of the level
     /// </summary>
-    void ResetLevel()
+    public void ResetLevel()
     {
         levelTimer = 0;
-        paused = true;
+        paused = false;
         clicks = 0;
         victory = false;
-        while (connectionLayer.Count > 1)
-        {
-            connectionLayer.Pop();
-        }
+        gameOver = false;
+        gameScreen.SetActive(true);
+        endScreen.SetActive(false);
     }
 
     void NextLevel()
