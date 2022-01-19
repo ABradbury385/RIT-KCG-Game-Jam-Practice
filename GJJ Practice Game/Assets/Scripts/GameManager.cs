@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public static GameManager SharedInstance;
 
     [SerializeField] private Text clientCommentText, clicksText, timerText, successText;
-    [SerializeField] private GameObject clientPicture, currentConnectionsPanel,
+    [SerializeField] private GameObject clientPicture, currentConnectionsPanel, startScreen,
         gameScreen, endScreen, successScreen, failureScreen;
     private Image clientSprite;
 
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         connectionLayer = new Stack<string>();
         connectionLayer.Push("Base layer");
         levelTimer = 0.0f;
-        paused = false;
+        paused = true;
         clicks = 0;
         levelNumber = 0;
         victory = false;
@@ -82,6 +82,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(startScreen.activeInHierarchy)
+        {
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                startScreen.SetActive(false);
+                gameScreen.SetActive(true);
+                paused = false;
+            }
+        }
+
         // Check if the game has ended and displays the results
         if(gameOver)
         {
